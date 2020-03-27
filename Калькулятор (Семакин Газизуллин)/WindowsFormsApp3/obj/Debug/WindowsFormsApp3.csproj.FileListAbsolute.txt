@@ -1,0 +1,36 @@
+C:\Users\student.MCK-KTITS\source\repos\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.config
+C:\Users\student.MCK-KTITS\source\repos\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
+C:\Users\student.MCK-KTITS\source\repos\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
+C:\Users\student.MCK-KTITS\source\repos\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csprojAssemblyReference.cache
+C:\Users\student.MCK-KTITS\source\repos\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form1.resources
+C:\Users\student.MCK-KTITS\source\repos\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
+C:\Users\student.MCK-KTITS\source\repos\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.GenerateResource.cache
+C:\Users\student.MCK-KTITS\source\repos\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
+C:\Users\student.MCK-KTITS\source\repos\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+C:\Users\Cap1ap\Desktop\дистанционное\прога\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.config
+C:\Users\Cap1ap\Desktop\дистанционное\прога\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
+C:\Users\Cap1ap\Desktop\дистанционное\прога\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
+C:\Users\Cap1ap\Desktop\дистанционное\прога\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csprojAssemblyReference.cache
+C:\Users\Cap1ap\Desktop\дистанционное\прога\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form1.resources
+C:\Users\Cap1ap\Desktop\дистанционное\прога\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
+C:\Users\Cap1ap\Desktop\дистанционное\прога\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.GenerateResource.cache
+C:\Users\Cap1ap\Desktop\дистанционное\прога\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
+C:\Users\Cap1ap\Desktop\дистанционное\прога\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+C:\Users\semak\Desktop\Новая папка (2)\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.config
+C:\Users\semak\Desktop\Новая папка (2)\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
+C:\Users\semak\Desktop\Новая папка (2)\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
+C:\Users\semak\Desktop\Новая папка (2)\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csprojAssemblyReference.cache
+C:\Users\semak\Desktop\Новая папка (2)\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form1.resources
+C:\Users\semak\Desktop\Новая папка (2)\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
+C:\Users\semak\Desktop\Новая папка (2)\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.GenerateResource.cache
+C:\Users\semak\Desktop\Новая папка (2)\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
+C:\Users\semak\Desktop\Новая папка (2)\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+C:\Users\Cap1ap\Desktop\Новая папка (2)\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.config
+C:\Users\Cap1ap\Desktop\Новая папка (2)\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
+C:\Users\Cap1ap\Desktop\Новая папка (2)\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
+C:\Users\Cap1ap\Desktop\Новая папка (2)\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csprojAssemblyReference.cache
+C:\Users\Cap1ap\Desktop\Новая папка (2)\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form1.resources
+C:\Users\Cap1ap\Desktop\Новая папка (2)\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
+C:\Users\Cap1ap\Desktop\Новая папка (2)\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.GenerateResource.cache
+C:\Users\Cap1ap\Desktop\Новая папка (2)\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
+C:\Users\Cap1ap\Desktop\Новая папка (2)\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
