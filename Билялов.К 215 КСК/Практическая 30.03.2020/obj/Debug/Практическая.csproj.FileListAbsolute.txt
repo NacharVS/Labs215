@@ -1,0 +1,10 @@
+C:\Users\user\Desktop\уч\Программирование\Практическая\bin\Debug\Практическая.exe.config
+C:\Users\user\Desktop\уч\Программирование\Практическая\bin\Debug\Практическая.exe
+C:\Users\user\Desktop\уч\Программирование\Практическая\bin\Debug\Практическая.pdb
+C:\Users\user\Desktop\уч\Программирование\Практическая\obj\Debug\Практическая.csprojAssemblyReference.cache
+C:\Users\user\Desktop\уч\Программирование\Практическая\obj\Debug\Практическая.Form1.resources
+C:\Users\user\Desktop\уч\Программирование\Практическая\obj\Debug\Практическая.Properties.Resources.resources
+C:\Users\user\Desktop\уч\Программирование\Практическая\obj\Debug\Практическая.csproj.GenerateResource.cache
+C:\Users\user\Desktop\уч\Программирование\Практическая\obj\Debug\Практическая.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\уч\Программирование\Практическая\obj\Debug\Практическая.exe
+C:\Users\user\Desktop\уч\Программирование\Практическая\obj\Debug\Практическая.pdb
