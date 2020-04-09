@@ -1,0 +1,10 @@
+C:\Users\user\Desktop\уч\Программирование\tetswinforms\bin\Debug\tetswinforms.exe.config
+C:\Users\user\Desktop\уч\Программирование\tetswinforms\bin\Debug\tetswinforms.exe
+C:\Users\user\Desktop\уч\Программирование\tetswinforms\bin\Debug\tetswinforms.pdb
+C:\Users\user\Desktop\уч\Программирование\tetswinforms\obj\Debug\tetswinforms.csprojAssemblyReference.cache
+C:\Users\user\Desktop\уч\Программирование\tetswinforms\obj\Debug\tetswinforms.Form1.resources
+C:\Users\user\Desktop\уч\Программирование\tetswinforms\obj\Debug\tetswinforms.Properties.Resources.resources
+C:\Users\user\Desktop\уч\Программирование\tetswinforms\obj\Debug\tetswinforms.csproj.GenerateResource.cache
+C:\Users\user\Desktop\уч\Программирование\tetswinforms\obj\Debug\tetswinforms.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\уч\Программирование\tetswinforms\obj\Debug\tetswinforms.exe
+C:\Users\user\Desktop\уч\Программирование\tetswinforms\obj\Debug\tetswinforms.pdb
