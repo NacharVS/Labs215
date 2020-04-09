@@ -1,0 +1,9 @@
+C:\Users\semak\Desktop\Новая папка (3).git\Мафия\Мафия\bin\Debug\Мафия.exe.config
+C:\Users\semak\Desktop\Новая папка (3).git\Мафия\Мафия\bin\Debug\Мафия.exe
+C:\Users\semak\Desktop\Новая папка (3).git\Мафия\Мафия\bin\Debug\Мафия.pdb
+C:\Users\semak\Desktop\Новая папка (3).git\Мафия\Мафия\obj\Debug\Мафия.csprojAssemblyReference.cache
+C:\Users\semak\Desktop\Новая папка (3).git\Мафия\Мафия\obj\Debug\Мафия.Form1.resources
+C:\Users\semak\Desktop\Новая папка (3).git\Мафия\Мафия\obj\Debug\Мафия.Properties.Resources.resources
+C:\Users\semak\Desktop\Новая папка (3).git\Мафия\Мафия\obj\Debug\Мафия.csproj.GenerateResource.cache
+C:\Users\semak\Desktop\Новая папка (3).git\Мафия\Мафия\obj\Debug\Мафия.exe
+C:\Users\semak\Desktop\Новая папка (3).git\Мафия\Мафия\obj\Debug\Мафия.pdb
