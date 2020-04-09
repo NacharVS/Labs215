@@ -1,0 +1,28 @@
+C:\Users\semak\Desktop\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\semak\Desktop\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\semak\Desktop\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\semak\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+C:\Users\semak\Desktop\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\semak\Desktop\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+C:\Users\semak\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\semak\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\semak\Desktop\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\semak\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\semak\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\semak\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\semak\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\semak\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\semak\Desktop\Новая папка (3)\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\semak\Desktop\Новая папка (3)\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\semak\Desktop\Новая папка (3)\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\semak\Desktop\Новая папка (3)\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+C:\Users\semak\Desktop\Новая папка (3)\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\semak\Desktop\Новая папка (3)\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+C:\Users\semak\Desktop\Новая папка (3)\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\semak\Desktop\Новая папка (3)\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\semak\Desktop\Новая папка (3)\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\semak\Desktop\Новая папка (3)\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\semak\Desktop\Новая папка (3)\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\semak\Desktop\Новая папка (3)\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\semak\Desktop\Новая папка (3)\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\semak\Desktop\Новая папка (3)\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
