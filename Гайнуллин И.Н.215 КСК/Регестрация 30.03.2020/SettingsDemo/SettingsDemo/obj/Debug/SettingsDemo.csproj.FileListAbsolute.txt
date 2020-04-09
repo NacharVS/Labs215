@@ -1,0 +1,10 @@
+C:\Users\DragonLord\Desktop\SettingsDemo-master\SettingsDemo\bin\Debug\SettingsDemo.exe.config
+C:\Users\DragonLord\Desktop\SettingsDemo-master\SettingsDemo\bin\Debug\SettingsDemo.exe
+C:\Users\DragonLord\Desktop\SettingsDemo-master\SettingsDemo\bin\Debug\SettingsDemo.pdb
+C:\Users\DragonLord\Desktop\SettingsDemo-master\SettingsDemo\obj\Debug\SettingsDemo.csprojAssemblyReference.cache
+C:\Users\DragonLord\Desktop\SettingsDemo-master\SettingsDemo\obj\Debug\SettingsDemo.Form1.resources
+C:\Users\DragonLord\Desktop\SettingsDemo-master\SettingsDemo\obj\Debug\SettingsDemo.Properties.Resources.resources
+C:\Users\DragonLord\Desktop\SettingsDemo-master\SettingsDemo\obj\Debug\SettingsDemo.csproj.GenerateResource.cache
+C:\Users\DragonLord\Desktop\SettingsDemo-master\SettingsDemo\obj\Debug\SettingsDemo.csproj.CoreCompileInputs.cache
+C:\Users\DragonLord\Desktop\SettingsDemo-master\SettingsDemo\obj\Debug\SettingsDemo.exe
+C:\Users\DragonLord\Desktop\SettingsDemo-master\SettingsDemo\obj\Debug\SettingsDemo.pdb
