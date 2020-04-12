@@ -1,9 +1,0 @@
-C:\Users\watch\source\repos\КАЛЬКУЛЯТОР БЛИН\КАЛЬКУЛЯТОР БЛИН\bin\Debug\КАЛЬКУЛЯТОР БЛИН.exe.config
-C:\Users\watch\source\repos\КАЛЬКУЛЯТОР БЛИН\КАЛЬКУЛЯТОР БЛИН\bin\Debug\КАЛЬКУЛЯТОР БЛИН.exe
-C:\Users\watch\source\repos\КАЛЬКУЛЯТОР БЛИН\КАЛЬКУЛЯТОР БЛИН\bin\Debug\КАЛЬКУЛЯТОР БЛИН.pdb
-C:\Users\watch\source\repos\КАЛЬКУЛЯТОР БЛИН\КАЛЬКУЛЯТОР БЛИН\obj\Debug\КАЛЬКУЛЯТОР БЛИН.csprojAssemblyReference.cache
-C:\Users\watch\source\repos\КАЛЬКУЛЯТОР БЛИН\КАЛЬКУЛЯТОР БЛИН\obj\Debug\КАЛЬКУЛЯТОР_БЛИН.Properties.Resources.resources
-C:\Users\watch\source\repos\КАЛЬКУЛЯТОР БЛИН\КАЛЬКУЛЯТОР БЛИН\obj\Debug\КАЛЬКУЛЯТОР БЛИН.csproj.GenerateResource.cache
-C:\Users\watch\source\repos\КАЛЬКУЛЯТОР БЛИН\КАЛЬКУЛЯТОР БЛИН\obj\Debug\КАЛЬКУЛЯТОР БЛИН.exe
-C:\Users\watch\source\repos\КАЛЬКУЛЯТОР БЛИН\КАЛЬКУЛЯТОР БЛИН\obj\Debug\КАЛЬКУЛЯТОР БЛИН.pdb
-C:\Users\watch\source\repos\КАЛЬКУЛЯТОР БЛИН\КАЛЬКУЛЯТОР БЛИН\obj\Debug\КАЛЬКУЛЯТОР_БЛИН.Калькулятор.resources
