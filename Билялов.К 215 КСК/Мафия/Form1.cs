@@ -261,5 +261,39 @@ namespace Randomizer
             collection.InsertOne(tm.ToBsonDocument()); ;
             TeamData();
         }
+
+        private void Button6_Click(object sender, EventArgs e)
+        {
+            if (listBox1.Items.Count == 16)
+            {
+                int rnd = 0;
+                Random rand = new Random();
+                for (int i = 0; i < 3; i++)
+                {
+                    rnd = rand.Next(0, 16 - i);
+                    listBox3.Items.Add(listBox1.Items[rnd]);
+                    listBox1.Items.Remove(listBox1.Items[rnd]);
+                }
+                for (int i = 0; i < 9; i++)
+                {
+                    rnd = rand.Next(0, 12 - i);
+                    listBox2.Items.Add(listBox1.Items[rnd]);
+                    listBox1.Items.Remove(listBox1.Items[rnd]);
+                }
+                rnd = rand.Next(0, 4);
+                labelmafia4.Text = $"{listBox1.Items[rnd]}";
+                listBox1.Items.Remove(listBox1.Items[rnd]);
+                rnd = rand.Next(0, 3);
+                labelpolice.Text = $"{listBox1.Items[rnd]}";
+                listBox1.Items.Remove(listBox1.Items[rnd]);
+                rnd = rand.Next(0, 2);
+                labeldoc.Text = $"{listBox1.Items[rnd]}";
+                listBox1.Items.Remove(listBox1.Items[rnd]);
+                rnd = rand.Next(0, 1);
+                labelsh.Text = $"{listBox1.Items[rnd]}";
+                listBox1.Items.Remove(listBox1.Items[rnd]);
+            }
+            else { MessageBox.Show("Игроков должно быть 16"); }
+        }
     }
 }
