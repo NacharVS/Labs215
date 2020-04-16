@@ -17,7 +17,8 @@ using MongoDB.Bson.Serialization.Attributes;
 namespace Randomizer
 {
     public partial class Form1 : Form
-    {     
+    {
+        List<string> idlist = new List<string>();
         public Form1()
         {
             InitializeComponent();
@@ -142,7 +143,9 @@ namespace Randomizer
         {
             this.BackgroundImageLayout = ImageLayout.Stretch;
             TeamData();
+            SaveData();
             comboBox1.SelectedValueChanged += PresetLoad;
+            comboBox2.SelectedValueChanged += SaveLoad;
         }
         public class Team
         {
@@ -155,6 +158,13 @@ namespace Randomizer
             public string sh;
             public string[] mirn = new string[9];
 
+        }
+        public class SavePlayers
+        { 
+            [BsonId]
+            public ObjectId id;
+            public List<string> players = new List<string>();
+            public string regdate;
         }
         private void Button3_Click(object sender, EventArgs e)
         {
@@ -258,7 +268,7 @@ namespace Randomizer
             {
                 tm.mirn[i] = $"{listBox2.Items[i]}"; ;
             }
-            collection.InsertOne(tm.ToBsonDocument()); ;
+            collection.InsertOne(tm.ToBsonDocument()); 
             TeamData();
         }
 
@@ -294,6 +304,110 @@ namespace Randomizer
                 listBox1.Items.Remove(listBox1.Items[rnd]);
             }
             else { MessageBox.Show("Игроков должно быть 16"); }
+        }
+
+        private void Button7_Click(object sender, EventArgs e)
+        {
+            if (listBox1.Items.Count > 0)
+            {
+                string connectionString = "mongodb://localhost:27017";
+                MongoClient client = new MongoClient(connectionString);
+                var database = client.GetDatabase("Mafia");
+                var collection = database.GetCollection<SavePlayers>("Saves");
+                //var filter = new BsonDocument();
+                //var acc = collection.Find(filter).ToList();
+                //int count = 0;
+                //foreach (var doc in acc)
+                //{
+                //    count += 1;
+                //}
+                SavePlayers Save = new SavePlayers();
+                //Save.id = count + 1;
+                for (int i = 0; i < listBox1.Items.Count; i++)
+                {
+                    Save.players.Add($"{listBox1.Items[i]}");
+                }
+                Save.regdate = $"Сейв от {DateTime.Now.ToShortTimeString()}, {DateTime.Now.ToShortDateString()}";
+                collection.InsertOne(Save);
+                SaveData();
+            }
+            else {MessageBox.Show("Нет игроков"); }
+        }
+        public void SaveData()
+        {
+            comboBox2.Items.Clear();
+            idlist.Clear();
+            string connectionString = "mongodb://localhost:27017";
+            MongoClient client = new MongoClient(connectionString);
+            var database = client.GetDatabase("Mafia");
+            var collection = database.GetCollection<BsonDocument>("Saves");
+            var filter = new BsonDocument();
+            var tm = collection.Find(filter).ToList();
+            foreach (var doc in tm)
+            {
+                comboBox2.Items.Add($"{doc.GetValue("regdate")}");
+                idlist.Add($"{doc.GetValue("_id")}");
+            }
+        }
+        private void SaveLoad(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            string connectionString = "mongodb://localhost:27017";
+            MongoClient client = new MongoClient(connectionString);
+            var database = client.GetDatabase("Mafia");
+            var collection = database.GetCollection<BsonDocument>("Saves");
+            ObjectId ID = new ObjectId($"{idlist[comboBox2.SelectedIndex]}");
+            var filter = new BsonDocument {
+
+                  {"_id",ID},    
+            };
+            var sv = collection.Find(filter).ToList();
+            BsonValue sav = null;
+
+            foreach (var doc in sv)
+            {
+                //MessageBox.Show("ds");
+               sav =  doc.GetValue("players");
+                for (int i = 0; i > -1; i++)
+                {
+                    try
+                    { listBox1.Items.Add($"{sav[i]}"); }
+                    catch { i = -2; }
+                }
+            }
+            
+
+        }
+
+        private void Button8_Click(object sender, EventArgs e)
+        {
+            if (comboBox2.SelectedIndex != -1)
+            {
+                string connectionString = "mongodb://localhost:27017";
+                MongoClient client = new MongoClient(connectionString);
+                var database = client.GetDatabase("Mafia");
+                var collection = database.GetCollection<BsonDocument>("Saves");
+                ObjectId ID = new ObjectId($"{idlist[comboBox2.SelectedIndex]}");
+                var filter = new BsonDocument {
+
+                  {"_id",ID},
+                };
+                var sv = collection.Find(filter).ToList();
+
+                foreach (var doc in sv)
+                {
+                    collection.DeleteOne(doc);
+                    idlist.Remove($"{ID}");
+                }
+                SaveData();
+                MessageBox.Show("Сохранение удалено");
+            }
+            else { MessageBox.Show("Выберите сохранение"); }
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
         }
     }
 }

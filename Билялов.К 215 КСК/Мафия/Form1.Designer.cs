@@ -58,6 +58,9 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button6 = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,7 +69,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(12, 45);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(189, 277);
+            this.listBox1.Size = new System.Drawing.Size(189, 212);
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.ListBox1_SelectedIndexChanged);
             // 
@@ -84,14 +87,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(39, 363);
+            this.textBox1.Location = new System.Drawing.Point(42, 298);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(131, 20);
             this.textBox1.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(39, 403);
+            this.button1.Location = new System.Drawing.Point(42, 338);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(131, 34);
             this.button1.TabIndex = 3;
@@ -105,7 +108,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(26, 330);
+            this.label2.Location = new System.Drawing.Point(29, 265);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(159, 20);
             this.label2.TabIndex = 4;
@@ -319,12 +322,13 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(39, 452);
+            this.button4.Location = new System.Drawing.Point(42, 387);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(131, 34);
             this.button4.TabIndex = 32;
-            this.button4.Text = "Удалить игрока";
+            this.button4.Text = "Удалить игроков";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // groupBox2
             // 
@@ -377,13 +381,44 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.Button6_Click);
             // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(12, 447);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(200, 21);
+            this.comboBox2.TabIndex = 35;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(12, 480);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(111, 39);
+            this.button7.TabIndex = 36;
+            this.button7.Text = "Зарегистрировать";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.Button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(129, 480);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(83, 39);
+            this.button8.TabIndex = 37;
+            this.button8.Text = "Удалить";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.Button8_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BackgroundImage = global::Randomizer.Properties.Resources._12r;
             this.ClientSize = new System.Drawing.Size(829, 537);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.listBox3);
@@ -455,6 +490,9 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }
 
