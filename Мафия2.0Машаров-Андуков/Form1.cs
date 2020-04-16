@@ -22,7 +22,7 @@ namespace WindowsFormsApp6
         public class Team
         {
             [BsonId]
-            public int id;
+            public BsonType id;
             public string tmName;
             public List<string> Mafia;
             public string Boss;
@@ -167,10 +167,19 @@ namespace WindowsFormsApp6
             }
         }
 
-        public void Form1_Load(object sender, EventArgs e)
+        public async void Form1_Load(object sender, EventArgs e)
         {
-            
-            
+            string connectionString = "mongodb://localhost";
+            var client = new MongoClient(connectionString);
+            var database = client.GetDatabase("Mafia");
+            var collection = database.GetCollection<Team>("Teams");
+            var filter = new BsonDocument();
+            var people = await collection.Find(filter).ToListAsync();
+
+            foreach (Team doc in people)
+            {
+                comboBox3.Items.Insert(comboBox3.Items.Count,doc.tmName);
+            }
         }
 
         async private void button7_Click(object sender, EventArgs e)
@@ -186,13 +195,14 @@ namespace WindowsFormsApp6
             if (a == 0)
             {
                 Team tm1 = new Team();
+                tm1.id = new BsonType();
                 tm1.Mafia = new List<string>();
                 tm1.Citzen = new List<string>();
                 string connectionString = "mongodb://localhost";
                 var client = new MongoClient(connectionString);
                 var database = client.GetDatabase("Mafia");
-                var collection = database.GetCollection<Team>("people");
-                tm1.id = o;
+                var collection = database.GetCollection<Team>("Teams");
+                //tm1.id = o;
                 tm1.tmName = textBox2.Text;
                 tm1.Mafia.Add(comboBox1.Items[0].ToString());
                 tm1.Mafia.Add(comboBox1.Items[1].ToString());
@@ -449,7 +459,7 @@ namespace WindowsFormsApp6
             string connectionString = "mongodb://localhost";
             var client = new MongoClient(connectionString);
             var database = client.GetDatabase("Mafia");
-            var collection = database.GetCollection<Team>("people");
+            var collection = database.GetCollection<Team>("Teams");
             var filter = new BsonDocument();
             var people = await collection.Find(filter).ToListAsync();
 
