@@ -1,0 +1,10 @@
+C:\Users\tazik\source\repos\Мафиозник\Мафиозник\bin\Debug\Мафиозник.exe.config
+C:\Users\tazik\source\repos\Мафиозник\Мафиозник\bin\Debug\Мафиозник.exe
+C:\Users\tazik\source\repos\Мафиозник\Мафиозник\bin\Debug\Мафиозник.pdb
+C:\Users\tazik\source\repos\Мафиозник\Мафиозник\obj\Debug\Мафиозник.csprojAssemblyReference.cache
+C:\Users\tazik\source\repos\Мафиозник\Мафиозник\obj\Debug\Мафиозник.Form1.resources
+C:\Users\tazik\source\repos\Мафиозник\Мафиозник\obj\Debug\Мафиозник.Properties.Resources.resources
+C:\Users\tazik\source\repos\Мафиозник\Мафиозник\obj\Debug\Мафиозник.csproj.GenerateResource.cache
+C:\Users\tazik\source\repos\Мафиозник\Мафиозник\obj\Debug\Мафиозник.csproj.CoreCompileInputs.cache
+C:\Users\tazik\source\repos\Мафиозник\Мафиозник\obj\Debug\Мафиозник.exe
+C:\Users\tazik\source\repos\Мафиозник\Мафиозник\obj\Debug\Мафиозник.pdb
