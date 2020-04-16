@@ -16,21 +16,17 @@ namespace Mafia
 {
     public partial class Form1 : Form
     {
-        bool s = true;
-        string[] st;
-        string[] wor;
+
         [BsonKnownTypes(typeof(Team))]
         class Team
         {
             [BsonId]
             public string TM_name;
-            //public List<string> mafia_role;
-            public string[] mafia_role = new string[4];
+            public List<string> mafia_role = new List<string>();
             public string butter_role;
             public string sherif_role;
             public string doc_role;
-            //public List<string> civilian_role;
-            public string[] civilian_role = new string[9];
+            public List<string> civilian_role = new List<string>();         
         }
         public Form1()
         {
@@ -52,7 +48,6 @@ namespace Mafia
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            //Rbutt();
             if (String.IsNullOrEmpty(name.Text))
             {
 
@@ -66,9 +61,7 @@ namespace Mafia
             else
             {
                     errorProvider1.Clear();
-                    //MessageBox.Show("_Добавлен игрок_");
                     listBox1.Items.Add(name.Text);
-                    //comboBox2.Items.Add(name.Text);
                     name.Text = "";
                 panel1.Visible = true;
                 button1.Visible = true;
@@ -84,7 +77,6 @@ namespace Mafia
             {
                 del.Text = listBox1.SelectedItem.ToString();
             }
-            //del.Text = listBox1.SelectedItem.ToString();
             if (String.IsNullOrEmpty(del.Text))
             {
 
@@ -99,45 +91,51 @@ namespace Mafia
                 {
                     MessageBox.Show($"_Удален игрок_ {del.Text}");
                     listBox1.Items.Remove(del.Text);
-                    //comboBox1.Items.Remove(del.Text);
                 }
                 else MessageBox.Show($"_Игрока с таким ником нет_ ");
                 del.Text = "";
                 
             }
         }
+        Team t1 = new Team();
 
-        
-        private void Form1_Load(object sender, EventArgs e)
+        private /*async*/ void Form1_Load(object sender, EventArgs e)
         {
-            comboBox3.SelectedValueChanged += PresetLoad;
+            //comboBox3.SelectedValueChanged += PresetLoad;
             TeamData();
-            //Team tm = new Team();
-            //tm.mafia_role = new List<string>();
-            //tm.civilian_role = new List<string>();
-
+            //string connectionString = "mongodb://localhost:27017";
+            //MongoClient client = new MongoClient(connectionString);
+            //var database = client.GetDatabase("Mafia");
+            //var collection = database.GetCollection<Team>("teamdata");
+            //var Teamcoll = /*await*/ collection.Find(x => x.TM_name != null).ToList();
+            //foreach (var item in Teamcoll)
+            //{
+            //    comboBox3.Items.Add(item.TM_name);
+            //}
         }
         public void Button2_Click(object sender, EventArgs e)
         {
             string connectionString = "mongodb://localhost:27017";
             MongoClient client = new MongoClient(connectionString);
             var database = client.GetDatabase("Mafia");
-            var collection = database.GetCollection<BsonDocument>("teamdata");
-            Team t1 = new Team();
+            //var collection = database.GetCollection<BsonDocument>("teamdata");
+            var collection = database.GetCollection<Team>("teamdata");
+            //Team t1 = new Team();
 
             t1.TM_name = comand.Text;
             for (int i = 0; i < comboBox1.Items.Count; i++)
             {
-                t1.mafia_role[i] = $"{comboBox1.Items[i]}";
+                t1.mafia_role.Add($"{ comboBox1.Items[i] }");
             }
             t1.butter_role = label8.Text;
             t1.sherif_role = label9.Text;
             t1.doc_role = label10.Text;
             for (int i = 0; i < comboBox2.Items.Count; i++)
             {
-                t1.civilian_role[i] = $"{comboBox2.Items[i]}"; ;
+                t1.civilian_role.Add($"{comboBox2.Items[i]}");
             }
-            collection.InsertOne(t1.ToBsonDocument()); ;
+            //collection.InsertOne(t1.ToBsonDocument()); ;
+            collection.InsertOne(t1);
             TeamData();
         }
 
@@ -154,51 +152,52 @@ namespace Mafia
             {
                 comboBox3.Items.Add($"{doc.GetValue("_id")}");
             }
+            
         }
 
-        private void PresetLoad(object sender, EventArgs e)
-        {
-            comboBox1.Items.Clear();
-            comboBox2.Items.Clear();
-            string connectionString = "mongodb://localhost:27017";
-            MongoClient client = new MongoClient(connectionString);
-            var database = client.GetDatabase("Mafia");
-            var collection = database.GetCollection<BsonDocument>("teamdata");
-            var filter = new BsonDocument {
+        //private void PresetLoad(object sender, EventArgs e)
+        //{
+        //    comboBox1.Items.Clear();
+        //    comboBox2.Items.Clear();
+        //    string connectionString = "mongodb://localhost:27017";
+        //    MongoClient client = new MongoClient(connectionString);
+        //    var database = client.GetDatabase("Mafia");
+        //    var collection = database.GetCollection<BsonDocument>("teamdata");
+        //    var filter = new BsonDocument {
 
-               {"_id",$"{comboBox3.SelectedItem}"},
+        //       {"_id",$"{comboBox3.SelectedItem}"},
 
-            };
-            var tm = collection.Find(filter).ToList();
-            BsonValue mafia = null;
-            BsonValue citizens = null;
-            foreach (var doc in tm)
-            {
+        //    };
+        //    var tm = collection.Find(filter).ToList();
+        //    BsonValue mafia = null;
+        //    BsonValue citizens = null;
+        //    foreach (var doc in tm)
+        //    {
 
-                mafia = doc.GetValue("mafia_role");
-                citizens = doc.GetValue("civilian_role");
-                if (doc.GetValue("butter_role") != BsonNull.Value)
-                    label8.Text = $"{doc.GetValue("butter_role")}";
-                if (doc.GetValue("butter_role") != BsonNull.Value)
-                    label9.Text = $"{doc.GetValue("sherif_role")}";
-                if (doc.GetValue("butter_role") != BsonNull.Value)
-                    label10.Text = $"{doc.GetValue("doc_role")}";
-            }
-            for (int i = 0; i < 4; i++)
-            {
-                if (mafia[i] != BsonNull.Value)
-                {
-                    comboBox1.Items.Add($"{mafia[i]}");
-                }
-            }
-            for (int i = 0; i < 9; i++)
-            {
-                if (citizens[i] != BsonNull.Value)
-                {
-                    comboBox2.Items.Add($"{citizens[i]}");
-                }
-            }
-        }
+        //        mafia = doc.GetValue("mafia_role");
+        //        citizens = doc.GetValue("civilian_role");
+        //        if (doc.GetValue("butter_role") != BsonNull.Value)
+        //            label8.Text = $"{doc.GetValue("butter_role")}";
+        //        if (doc.GetValue("butter_role") != BsonNull.Value)
+        //            label9.Text = $"{doc.GetValue("sherif_role")}";
+        //        if (doc.GetValue("butter_role") != BsonNull.Value)
+        //            label10.Text = $"{doc.GetValue("doc_role")}";
+        //    }
+        //    for (int i = 0; i < 4; i++)
+        //    {
+        //        if (mafia[i] != BsonNull.Value)
+        //        {
+        //            comboBox1.Items.Add($"{mafia[i]}");
+        //        }
+        //    }
+        //    for (int i = 0; i < 9; i++)
+        //    {
+        //        if (citizens[i] != BsonNull.Value)
+        //        {
+        //            comboBox2.Items.Add($"{citizens[i]}");
+        //        }
+        //    }
+        //}
 
 
 
@@ -219,16 +218,7 @@ namespace Mafia
                     {
                         if (comboBox1.Items.Count < 4)
                         {
-                            if (comboBox1.Items.Contains(d) == false)
-                            {
-                                for (int i = 0; i <= 4; i++)
-                                {
-                                    st[i] = comboBox1.Items.Add(d).ToString();
-                                }
-                            }
-                            //int kol = comboBox1.Items.Count;
-                            /*if (comboBox1.Items.Count == 4)*/
-                            comboBox1.Items.RemoveAt(4);
+                            comboBox1.Items.Add(d).ToString();
                         }
                         else { MessageBox.Show("Достигнуто максимальное кол-во игроков"); }
                     }
@@ -248,7 +238,6 @@ namespace Mafia
                             {
                                 if (label9.Text != d && label8.Text != d)
                                     comboBox2.Items.Add(d);
-                                //comboBox1.Items.RemoveAt(4);
                             }
                             else MessageBox.Show($"_Игрок_ {d} cуществует");
                         }
@@ -257,27 +246,15 @@ namespace Mafia
                     if (comboBox1.Items.Count != 0 && comboBox2.Items.Count != 0 && label8.Text != "" && label9.Text != "" && label10.Text != "")
                         panel2.Visible = true;
                 }
-                //panel2.Visible = true;
             }
             catch
             {
-
             }
         }
 
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //string d = listBox1.SelectedItem.ToString();
-            //string[] maf = new string[4];
-            //for (int i = 0; i < 4; i++)
-            //{
-            //    if (comboBox1.Items.Contains(d) == false)
-            //    {
-            //        maf[i] = comboBox1.Items.Add(d).ToString();
-            //    }
-
-            //}
         }
 
         private void Cle_Click(object sender, EventArgs e)
@@ -296,28 +273,66 @@ namespace Mafia
 
         private void Button5_Click(object sender, EventArgs e)
         {
-            if (listBox1.Items.Count == 16)
+            if(!(listBox1.Items.Count < 16))
             {
-                int rnd = 0;
-                Random rand = new Random();
-                for (int i = 0; i < 4; i++)
+                Random rnd = new Random();
+                int[] random = new int[listBox1.Items.Count];
+                for (int i = 0; i < random.Length-1; i++)
                 {
-                    rnd = rand.Next(0, 16 - i);
-                    comboBox1.Items.Add(listBox1.Items[rnd]); 
+                    int x = rnd.Next(0, listBox1.Items.Count);
+                    if (!(random.Contains(x))) random[i] = x;
+                    else i--;
                 }
-                for (int i = 0; i < 9; i++)
+                comboBox1.Items.Add(listBox1.Items[random[0]].ToString());
+                comboBox1.Items.Add(listBox1.Items[random[1]].ToString());
+                comboBox1.Items.Add(listBox1.Items[random[2]].ToString());
+                comboBox1.Items.Add(listBox1.Items[random[3]].ToString());
+                label8.Text = listBox1.Items[random[4]].ToString();
+                label9.Text = listBox1.Items[random[5]].ToString();
+                label10.Text = listBox1.Items[random[6]].ToString();
+                for (int i = 7; i < listBox1.Items.Count; i++)
                 {
-                    rnd = rand.Next(0, 12 - i);
-                    comboBox2.Items.Add(listBox1.Items[rnd]);
+                    comboBox2.Items.Add(listBox1.Items[random[i]].ToString());
                 }
-                rnd = rand.Next(0, 3);
-                label8.Text = $"{listBox1.Items[rnd]}";
-                rnd = rand.Next(0, 2);
-                label9.Text = $"{listBox1.Items[rnd]}";       
-                rnd = rand.Next(0, 1);
-                label10.Text = $"{listBox1.Items[rnd]}";
+                panel2.Visible = true;
             }
-            else { MessageBox.Show("Игроков должно быть 16"); }
+            else MessageBox.Show("Чтобы использоать эту функцию нужно, хотя бы 16 человек ");
+            }
+
+        private void ComboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            comboBox2.Items.Clear();
+            string connectionString = "mongodb://localhost:27017";
+            MongoClient client = new MongoClient(connectionString);
+            var database = client.GetDatabase("Mafia");
+            var collection = database.GetCollection<Team>("teamdata");
+            var Teamcoll = collection.Find(x => x.TM_name == comboBox3.SelectedItem.ToString()).ToList();
+            foreach (var item in Teamcoll)
+            {
+                for (int i = 0; i < item.mafia_role.Count; i++)
+                {
+                    if (item.mafia_role[i] != null)
+                        comboBox1.Items.Add(item.mafia_role[i].ToString());
+                }
+                //if (item.mafia_role[0] != null)
+                //    comboBox1.Items.Add(item.mafia_role[0].ToString());
+                //if (item.mafia_role[1] != null)
+                //    comboBox1.Items.Add(item.mafia_role[1].ToString());
+                //if (item.mafia_role[2] != null)
+                //    comboBox1.Items.Add(item.mafia_role[2].ToString());
+                //if (item.mafia_role[3] != null)
+                //    comboBox1.Items.Add(item.mafia_role[3].ToString());
+                label8.Text = item.butter_role.ToString();
+                label9.Text = item.sherif_role.ToString();
+                label10.Text = item.doc_role.ToString();
+                for (int i = 0; i <item.civilian_role.Count; i++)
+                {
+                    if (item.civilian_role[i] != null)
+                        comboBox2.Items.Add(item.civilian_role[i].ToString());
+                }
+                panel2.Visible = true;
+            }
         }
     }
 }

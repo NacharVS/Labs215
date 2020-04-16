@@ -371,6 +371,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(207, 21);
             this.comboBox3.TabIndex = 50;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.ComboBox3_SelectedIndexChanged);
             // 
             // Cle
             // 
@@ -397,7 +398,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 297);
+            this.ClientSize = new System.Drawing.Size(667, 299);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.Cle);
             this.Controls.Add(this.comboBox3);
