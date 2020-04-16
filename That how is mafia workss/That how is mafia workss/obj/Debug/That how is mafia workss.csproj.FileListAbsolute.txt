@@ -1,0 +1,9 @@
+C:\Users\watch\source\repos\That how is mafia workss\That how is mafia workss\bin\Debug\That how is mafia workss.exe.config
+C:\Users\watch\source\repos\That how is mafia workss\That how is mafia workss\bin\Debug\That how is mafia workss.exe
+C:\Users\watch\source\repos\That how is mafia workss\That how is mafia workss\bin\Debug\That how is mafia workss.pdb
+C:\Users\watch\source\repos\That how is mafia workss\That how is mafia workss\obj\Debug\That how is mafia workss.csprojAssemblyReference.cache
+C:\Users\watch\source\repos\That how is mafia workss\That how is mafia workss\obj\Debug\That_how_is_mafia_workss.Form1.resources
+C:\Users\watch\source\repos\That how is mafia workss\That how is mafia workss\obj\Debug\That_how_is_mafia_workss.Properties.Resources.resources
+C:\Users\watch\source\repos\That how is mafia workss\That how is mafia workss\obj\Debug\That how is mafia workss.csproj.GenerateResource.cache
+C:\Users\watch\source\repos\That how is mafia workss\That how is mafia workss\obj\Debug\That how is mafia workss.exe
+C:\Users\watch\source\repos\That how is mafia workss\That how is mafia workss\obj\Debug\That how is mafia workss.pdb
